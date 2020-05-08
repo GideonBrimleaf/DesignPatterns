@@ -1,4 +1,4 @@
-package models
+package strategy_pattern_models
 
 class FlyNoWay:FlyBehaviour {
     override fun fly(): String {

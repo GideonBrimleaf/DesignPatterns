@@ -1,8 +1,8 @@
-package models
+package strategy_pattern_models
 
 abstract class Duck(
     private var name: String,
-    private var flyBehaviour: FlyBehaviour,
+    internal var flyBehaviour: FlyBehaviour,
     private var quackBehaviour: QuackBehaviour
 ) {
 

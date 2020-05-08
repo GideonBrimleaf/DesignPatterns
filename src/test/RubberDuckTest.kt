@@ -1,6 +1,6 @@
 package test
 
-import models.RubberDuck
+import strategy_pattern_models.RubberDuck
 import org.junit.Test
 import kotlin.test.assertNotEquals
 

@@ -1,6 +1,6 @@
 package test
 
-import models.Mallard
+import strategy_pattern_models.Mallard
 import org.junit.Test
 import kotlin.test.assertEquals
 

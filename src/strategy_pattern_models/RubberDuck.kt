@@ -1,4 +1,4 @@
-package models
+package strategy_pattern_models
 
 class RubberDuck(name: String) : Duck(name, FlyNoWay(), Squeak()) {
 
