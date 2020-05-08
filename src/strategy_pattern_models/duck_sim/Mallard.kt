@@ -1,4 +1,4 @@
-package strategy_pattern_models
+package strategy_pattern_models.duck_sim
 
 class Mallard(name: String): Duck(name, FlyWithWings(), Quack()) {
     override fun display(): String {

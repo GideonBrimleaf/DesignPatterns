@@ -1,7 +1,7 @@
-package test
+package test.strategy_pattern_tests
 
-import strategy_pattern_models.FlyRocketPowered
-import strategy_pattern_models.ModelDuck
+import strategy_pattern_models.duck_sim.FlyRocketPowered
+import strategy_pattern_models.duck_sim.ModelDuck
 import org.junit.Test
 import kotlin.test.assertEquals
 

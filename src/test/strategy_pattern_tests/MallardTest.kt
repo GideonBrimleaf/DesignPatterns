@@ -1,6 +1,6 @@
-package test
+package test.strategy_pattern_tests
 
-import strategy_pattern_models.Mallard
+import strategy_pattern_models.duck_sim.Mallard
 import org.junit.Test
 import kotlin.test.assertEquals
 

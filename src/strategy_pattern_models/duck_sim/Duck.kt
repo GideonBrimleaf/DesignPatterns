@@ -1,4 +1,4 @@
-package strategy_pattern_models
+package strategy_pattern_models.duck_sim
 
 abstract class Duck(
     private var name: String,

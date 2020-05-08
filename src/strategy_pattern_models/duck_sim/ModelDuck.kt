@@ -1,4 +1,4 @@
-package strategy_pattern_models
+package strategy_pattern_models.duck_sim
 
 class ModelDuck(name:String) : Duck(name, FlyNoWay(), Quack()) {
     override fun display(): String {
