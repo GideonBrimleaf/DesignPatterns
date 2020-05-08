@@ -1,9 +1,8 @@
-package Test
+package test
 
-import Models.Mallard
+import models.Mallard
 import org.junit.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNotEquals
 
 class MallardTest {
 
@@ -11,7 +10,7 @@ class MallardTest {
 
     @Test
     fun `Duck can fly`(){
-        assertEquals("flying", danaerys.fly())
+        assertEquals("flying", danaerys.performFly())
     }
 
     @Test
@@ -21,7 +20,7 @@ class MallardTest {
 
     @Test
     fun `Duck can quack`(){
-        assertEquals("quacking", danaerys.quack())
+        assertEquals("quacking", danaerys.performQuack())
     }
 
     @Test

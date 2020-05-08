@@ -1,7 +1,6 @@
-package Test
+package test
 
-import Models.RubberDuck
-import org.junit.Ignore
+import models.RubberDuck
 import org.junit.Test
 import kotlin.test.assertNotEquals
 
@@ -11,11 +10,11 @@ class RubberDuckTest {
 
     @Test
     fun `Rubber ducks don't fly`(){
-        assertNotEquals("flying", valjean.fly())
+        assertNotEquals("flying", valjean.performFly())
     }
 
     @Test
     fun `Rubber ducks don't quack`(){
-        assertNotEquals("Quacking", valjean.quack())
+        assertNotEquals("quacking", valjean.performQuack())
     }
 }
