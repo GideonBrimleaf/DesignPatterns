@@ -3,10 +3,11 @@ package Test
 import Models.Mallard
 import org.junit.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNotEquals
 
-class DuckTest {
+class MallardTest {
 
-    val danaerys = Mallard("Danaerys")
+    private val danaerys = Mallard("Danaerys")
 
     @Test
     fun `Duck can fly`(){
@@ -27,6 +28,5 @@ class DuckTest {
     fun `Duck can be shown off`(){
         assertEquals("Looks like a legend", danaerys.display())
     }
-
 
 }
