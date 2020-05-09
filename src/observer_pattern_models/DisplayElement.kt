@@ -1,5 +1,5 @@
 package observer_pattern_models
 
 interface DisplayElement {
-    fun display()
+    fun display():String
 }

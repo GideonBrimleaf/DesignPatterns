@@ -18,4 +18,15 @@ class WeatherData(
     override fun notifyObservers() {
         observers.forEach{it.update(temp, humidity, pressure)}
     }
+
+    private fun measurementsChanged() {
+        notifyObservers()
+    }
+
+    fun setMeasurements(temp:Float, humidity: Float, pressure: Float){
+        this.temp = temp
+        this.humidity = humidity
+        this.pressure = pressure
+        measurementsChanged()
+    }
 }
