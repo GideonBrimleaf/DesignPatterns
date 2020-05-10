@@ -13,10 +13,14 @@ class StatisticsDisplay(
     }
 
     override fun update(temp: Float, humidity: Float, pressure: Float) {
-        TODO("Not yet implemented")
+        tempSum += temp
+        numReadings++
+        if (temp > maxTemp) maxTemp = temp
+        if (temp < minTemp) minTemp = temp
+        display()
     }
 
     override fun display(): String {
-        TODO("Not yet implemented")
+        return "Avg/Max/Min temperature = ${tempSum/numReadings}/${maxTemp}/${minTemp}"
     }
 }
