@@ -20,15 +20,16 @@ class WeatherDataTest {
     fun before(){weatherama.setMeasurements(80f,65f,30.4f)}
 
     @Test
-    fun `Observers update as the measurements are set on weatherrama`(){
-        assertEquals(80f, weatherama.getTemp())
-
+    fun `Weatherrama has data`(){
+        assertEquals(80f, weatherama.temp)
+        assertEquals(65f, weatherama.humidity)
+        assertEquals(30.4f, weatherama.pressure)
     }
 
     @Ignore
     @Test
     fun `Observers change response as data changes`(){
-
+        
     }
 
 }
