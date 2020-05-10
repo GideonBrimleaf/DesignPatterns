@@ -1,10 +1,15 @@
 package observer_pattern_models
 
 class CurrentConditionsDisplay(
-    private var temp: Float,
-    private var humidity: Float,
-    private var subject:WeatherData
+    weatherData:WeatherData
 ) : Observer, DisplayElement {
+
+    init{
+        weatherData.registerObserver(this)
+    }
+
+    private var temp:Float = 0.0f
+    private var humidity:Float = 0.0f
 
     override fun update(temp: Float, humidity: Float, pressure: Float) {
         this.temp = temp

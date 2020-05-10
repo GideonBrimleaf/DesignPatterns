@@ -1,15 +1,17 @@
 package observer_pattern_models
 
-class WeatherData(
-    private val observers:MutableList<Observer>,
-    private var temp:Float,
-    private var humidity:Float,
-    private var pressure:Float
-) : Subject {
+class WeatherData() : Subject {
+
+    private var observers: MutableList<Observer> = mutableListOf()
+    private var temp: Float = 0.0f
+    private var humidity: Float = 0.0f
+    private var pressure: Float = 0.0f
 
     override fun registerObserver(observer: Observer) {
         observers.add(observer)
     }
+
+    fun getTemp():Float = this.temp
 
     override fun removeObserver(observer: Observer) {
         observers.remove(observer)
