@@ -22,6 +22,6 @@ class StatisticsDisplay(
     }
 
     override fun display(): String {
-        return "Avg/Max/Min temperature = ${tempSum/numReadings}/${maxTemp}/${minTemp}"
+        return "Avg/Max/Min temperature = ${tempSum/numReadings}/$maxTemp/$minTemp"
     }
 }

@@ -1,20 +1,16 @@
 package test.observer_pattern_tests
 
-import observer_pattern_models.CurrentConditionsDisplay
-import observer_pattern_models.ForecastDisplay
-import observer_pattern_models.StatisticsDisplay
-import observer_pattern_models.WeatherData
+import observer_pattern_models.*
 import org.junit.Before
-import org.junit.Ignore
 import org.junit.Test
 import kotlin.test.assertEquals
 
 class WeatherDataTest {
 
     private val weatherama = WeatherData()
-    val conditionsDisplay = CurrentConditionsDisplay(weatherama)
-    val statisticsDisplay = StatisticsDisplay(weatherama)
-    val forecastDisplay = ForecastDisplay(weatherama)
+    private val conditionsDisplay = CurrentConditionsDisplay(weatherama)
+    private val statisticsDisplay = StatisticsDisplay(weatherama)
+    private val forecastDisplay = ForecastDisplay(weatherama)
 
     @Before
     fun before(){weatherama.setMeasurements(80f,65f,30.4f)}
@@ -41,4 +37,12 @@ class WeatherDataTest {
         assertEquals("Avg/Max/Min temperature = 81.0/82.0/80.0", statisticsDisplay.display())
     }
 
+    @Test
+    fun `Can add a heat index display`(){
+        val heatey = HeatIndexDisplay(weatherama)
+        weatherama.setMeasurements(80f,65f,30.4f)
+        assertEquals("Heat index is 82.95535", heatey.display())
+        weatherama.setMeasurements(82f, 70f, 29.2f)
+        assertEquals("Heat index is 86.90124", heatey.display())
+    }
 }
