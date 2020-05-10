@@ -26,10 +26,19 @@ class WeatherDataTest {
         assertEquals(30.4f, weatherama.pressure)
     }
 
-    @Ignore
     @Test
-    fun `Observers change response as data changes`(){
-        
+    fun `Observers respond to weatherama data`(){
+        assertEquals("Current conditions 80.0F, and 65.0% humidity", conditionsDisplay.display())
+        assertEquals("Forecast: Improving weather on the way!", forecastDisplay.display())
+        assertEquals("Avg/Max/Min temperature = 80.0/80.0/80.0", statisticsDisplay.display())
+    }
+
+    @Test
+    fun `Observers update as weatherama updates`(){
+        weatherama.setMeasurements(82f, 70f, 29.2f)
+        assertEquals("Current conditions 82.0F, and 70.0% humidity", conditionsDisplay.display())
+        assertEquals("Forecast: Watch out for cooler, wetter weather!", forecastDisplay.display())
+        assertEquals("Avg/Max/Min temperature = 81.0/82.0/80.0", statisticsDisplay.display())
     }
 
 }

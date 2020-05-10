@@ -18,6 +18,6 @@ class CurrentConditionsDisplay(
     }
 
     override fun display():String {
-        return "Current conditions ${this.temp}C, and ${this.humidity}bar"
+        return "Current conditions ${this.temp}F, and ${this.humidity}% humidity"
     }
 }
