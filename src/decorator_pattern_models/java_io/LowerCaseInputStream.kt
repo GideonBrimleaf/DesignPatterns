@@ -12,9 +12,7 @@ class LowerCaseInputStream(`in`: InputStream) : FilterInputStream(`in`) {
 
     override fun read(byteArray: ByteArray, offset:Int, len:Int): Int{
         val result = super.read(byteArray, offset, len)
-
         byteArray.forEach { Character.toLowerCase(it.toChar()).toByte() }
-
         return result
     }
 
