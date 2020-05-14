@@ -1,4 +1,6 @@
-package decorator_pattern_models
+package decorator_pattern_models.starbuzz_coffee
+
+import decorator_pattern_models.starbuzz_coffee.Beverage
 
 class Espresso() : Beverage() {
     override val description = "Espresso"
