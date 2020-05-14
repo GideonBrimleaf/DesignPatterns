@@ -1,7 +1,3 @@
 package decorator_pattern_models
 
-abstract class CondimentDecorator : Beverage() {
-
-    abstract override val description:String
-
-}
+abstract class CondimentDecorator(val beverage: Beverage) : Beverage()

@@ -1,6 +1,6 @@
 package decorator_pattern_models
 
-class Mocha(private val beverage: Beverage) : CondimentDecorator() {
+class Mocha(beverage: Beverage) : CondimentDecorator(beverage) {
 
     override val description = beverage.description + ", Mocha"
 
