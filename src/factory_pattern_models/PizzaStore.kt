@@ -1,8 +1,11 @@
 package factory_pattern_models
 
-class PizzaStore(private val factory:PizzaFactory) {
+abstract class PizzaStore() {
+
+    abstract fun createPizza(type:String):Pizza
+
     fun orderPizza(type:String):String {
-        val pizza = factory.createPizza(type)
+        val pizza = createPizza(type)
         pizza.prepare()
         pizza.bake()
         pizza.cut()

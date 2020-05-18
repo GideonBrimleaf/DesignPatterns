@@ -1,8 +1,8 @@
 package factory_pattern_models
 
-class GenericPizza : Pizza() {
+class ChicagoGenericPizza : Pizza() {
     override fun prepare(): String {
-        return "Preparing El Generico"
+        return "Preparing El Generico  - Chicago style!"
     }
 
     override fun bake(): String {

@@ -1,5 +1,6 @@
 package test.factory_pattern_test
 
+import factory_pattern_models.ChicagoPizzaStore
 import factory_pattern_models.PizzaFactory
 import factory_pattern_models.PizzaStore
 import org.junit.Before
@@ -13,11 +14,11 @@ class FactoryPatternTest {
     @Before
     fun before(){
         factory = PizzaFactory()
-        store = PizzaStore(factory)
+        store = ChicagoPizzaStore()
     }
 
     @Test
     fun `Selects the right pizza`(){
-        assertEquals("Boxing a Pepperoni Pizza", store.orderPizza("Pepperoni"))
+        assertEquals("Boxing a Pepperoni Pizza - Chicago style!", store.orderPizza("Pepperoni"))
     }
 }

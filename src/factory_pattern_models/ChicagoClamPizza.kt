@@ -1,8 +1,8 @@
 package factory_pattern_models
 
-class ClamPizza : Pizza() {
+class ChicagoClamPizza : Pizza() {
     override fun prepare(): String {
-        return "Preparing a Clam Pizza"
+        return "Preparing a Clam Pizza  - Chicago style!"
     }
 
     override fun bake(): String {

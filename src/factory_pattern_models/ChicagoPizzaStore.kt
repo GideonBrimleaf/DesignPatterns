@@ -1,8 +1,7 @@
 package factory_pattern_models
 
-class PizzaFactory {
-    fun createPizza(type:String): Pizza {
-
+class ChicagoPizzaStore : PizzaStore() {
+    override fun createPizza(type: String): Pizza {
         return when(type){
             "Cheese" -> ChicagoCheesePizza()
             "Pepperoni" -> ChicagoPepperoniPizza()
@@ -10,6 +9,5 @@ class PizzaFactory {
             "Veggie" -> ChicagoVeggiePizza()
             else -> ChicagoGenericPizza()
         }
-        
     }
 }
