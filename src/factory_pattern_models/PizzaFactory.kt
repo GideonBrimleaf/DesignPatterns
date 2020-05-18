@@ -8,7 +8,7 @@ class PizzaFactory {
             "Pepperoni" -> PepperoniPizza()
             "Clam" -> ClamPizza()
             "Veggie" -> VeggiePizza()
-            else -> Pizza()
+            else -> GenericPizza()
         }
         
     }

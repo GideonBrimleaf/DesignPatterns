@@ -1,19 +1,19 @@
 package factory_pattern_models
 
-class ClamPizza : Pizza() {
+class GenericPizza : Pizza() {
     override fun prepare(): String {
-        return "Preparing a Clam Pizza"
+        return "Preparing El Generico"
     }
 
     override fun bake(): String {
-        return "Baking a Clam Pizza"
+        return "Baking El Generico"
     }
 
     override fun cut(): String {
-        return "Cutting a Clam Pizza"
+        return "Cutting El Generico"
     }
 
     override fun box(): String {
-        return "Boxing a Clam Pizza"
+        return "Boxing El Generico"
     }
 }

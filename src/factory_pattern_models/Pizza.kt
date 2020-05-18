@@ -1,19 +1,11 @@
 package factory_pattern_models
 
-open class Pizza {
-    fun prepare():String {
-        return "Making the pizza"
-    }
+abstract class Pizza {
+    abstract fun prepare():String
 
-    fun bake():String{
-        return "Baking the pizza"
-    }
+    abstract fun bake():String
 
-    fun cut():String{
-        return "Cutting the pizza"
-    }
+    abstract fun cut():String
 
-    fun box():String{
-        return "boxing the pizza"
-    }
+    abstract fun box():String
 }
