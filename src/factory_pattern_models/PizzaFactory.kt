@@ -1,5 +1,7 @@
 package factory_pattern_models
 
+import factory_pattern_models.chicago_pizzas.*
+
 class PizzaFactory {
     fun createPizza(type:String): Pizza {
 
