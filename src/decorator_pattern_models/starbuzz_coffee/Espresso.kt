@@ -1,9 +1,7 @@
 package decorator_pattern_models.starbuzz_coffee
 
-import decorator_pattern_models.starbuzz_coffee.Beverage
-
-class Espresso() : Beverage() {
-    override val description = "Espresso"
+class Espresso(size: Size = Size.REGULAR) : Beverage(size) {
+    override val description = "${size.tidyName} Espresso"
 
     override fun cost():Double {
         return 1.99

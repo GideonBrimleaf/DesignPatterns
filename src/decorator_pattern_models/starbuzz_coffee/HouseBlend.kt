@@ -2,9 +2,9 @@ package decorator_pattern_models.starbuzz_coffee
 
 import decorator_pattern_models.starbuzz_coffee.Beverage
 
-class HouseBlend : Beverage() {
+class HouseBlend(size: Size = Size.REGULAR) : Beverage(size) {
 
-    override val description = "House Blend Coffee"
+    override val description = "${size.tidyName} House Blend Coffee"
 
     override fun cost(): Double {
         return .89
