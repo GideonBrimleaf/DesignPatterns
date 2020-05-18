@@ -3,6 +3,7 @@ package test.factory_pattern_test
 import factory_pattern_models.chicago_pizzas.ChicagoPizzaStore
 import factory_pattern_models.PizzaFactory
 import factory_pattern_models.PizzaStore
+import factory_pattern_models.new_york_pizzas.NewYorkPizzaStore
 import org.junit.Before
 import org.junit.Ignore
 import org.junit.Test
@@ -16,10 +17,9 @@ class FactoryPatternTest {
         assertEquals("Boxing a Pepperoni Pizza - Chicago style!", store.orderPizza("Pepperoni"))
     }
 
-    @Ignore
     @Test
     fun `Can flex with regions`(){
-        val store = NYPizzaStore()
-        assertEquals("Boxing a Cheese Pizza - NY Style!", store.orderPizza("Cheese"))
+        val store = NewYorkPizzaStore()
+        assertEquals("NY Cheese Pizza Being Boxed!", store.orderPizza("Cheese"))
     }
 }
