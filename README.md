@@ -10,4 +10,4 @@ To set up JUnit tests in IntelliJ step through the following:
 4. Once there you are looking for the lib sub-folder. This will contain a whole bunch of libraries already installed with IntelliJ, from there you are looking for two libraries:
   * junit-4.12
   * hamcrest-core-1.3
-5. You made need to select these individually but they should both be present in the dependencies dialogue box. Once there click ok and you should have the ability to import JUnit into your Kotlin project
+5. You may need to select these individually but they should both be present in the dependencies dialogue box. Once there click ok and you should have the ability to import JUnit into your Kotlin project
