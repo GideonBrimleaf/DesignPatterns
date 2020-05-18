@@ -23,7 +23,7 @@ class LowerCaseInputStreamTest {
             result += c.toChar()
         }
         thing.close()
-        assertEquals("i know the decorator pattern there i rule!", result)
+        assertEquals("i know the decorator pattern therefore i rule!", result)
     }
 
 }
