@@ -2,7 +2,7 @@ package factory_pattern_models
 
 abstract class PizzaStore() {
 
-    abstract fun createPizza(type:String):Pizza
+    protected abstract fun createPizza(type:String):Pizza
 
     fun orderPizza(type:String):String {
         val pizza = createPizza(type)
