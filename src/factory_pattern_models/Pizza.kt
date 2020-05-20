@@ -1,16 +1,23 @@
 package factory_pattern_models
 
-abstract class Pizza {
+import factory_pattern_models.ingredients.*
+
+abstract class Pizza(private val pizzaIngredientFactory: PizzaIngredientFactory) {
     abstract val name:String
-    abstract val dough:String
-    abstract val sauce:String
-    abstract val toppings:MutableList<String>
+    val dough:Dough = pizzaIngredientFactory.createDough()
+    val sauce:Sauce = pizzaIngredientFactory.createSauce()
 
     abstract fun prepare():String
 
-    abstract fun bake():String
+    fun bake():String{
+        return "Bake for 25 minutes at 350"
+    }
 
-    abstract fun cut():String
+    fun cut():String{
+        return "Cutting the pizza into diagonal slices"
+    }
 
-    abstract fun box():String
+    fun box():String{
+        return "Place pizza in official pizza store box"
+    }
 }

@@ -6,9 +6,9 @@ abstract class PizzaStore() {
 
     fun orderPizza(type:String):String {
         val pizza = createPizza(type)
-        pizza.prepare()
         pizza.bake()
         pizza.cut()
-        return pizza.box()
+        pizza.box()
+        return pizza.prepare()
     }
 }

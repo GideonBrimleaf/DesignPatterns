@@ -4,6 +4,8 @@ import factory_pattern_models.PizzaIngredientFactory
 import factory_pattern_models.ingredients.*
 
 class ChicagoIngredientFactory : PizzaIngredientFactory{
+    override val name: String = "Chicago"
+
     override fun createDough(): Dough {
         return ThickCrust()
     }
