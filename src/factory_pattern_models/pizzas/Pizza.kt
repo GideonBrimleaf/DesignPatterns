@@ -1,5 +1,6 @@
-package factory_pattern_models
+package factory_pattern_models.pizzas
 
+import factory_pattern_models.PizzaIngredientFactory
 import factory_pattern_models.ingredients.*
 
 abstract class Pizza(private val pizzaIngredientFactory: PizzaIngredientFactory) {

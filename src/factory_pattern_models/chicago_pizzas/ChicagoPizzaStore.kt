@@ -1,9 +1,8 @@
 package factory_pattern_models.chicago_pizzas
 
-import factory_pattern_models.Pizza
+import factory_pattern_models.pizzas.Pizza
 import factory_pattern_models.PizzaIngredientFactory
 import factory_pattern_models.PizzaStore
-import factory_pattern_models.new_york_pizzas.NewYorkIngredientFactory
 import factory_pattern_models.pizzas.CheesePizza
 import factory_pattern_models.pizzas.ClamPizza
 import factory_pattern_models.pizzas.PepperoniPizza

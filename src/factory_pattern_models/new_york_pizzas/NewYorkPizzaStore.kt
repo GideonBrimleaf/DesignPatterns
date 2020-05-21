@@ -1,6 +1,6 @@
 package factory_pattern_models.new_york_pizzas
 
-import factory_pattern_models.Pizza
+import factory_pattern_models.pizzas.Pizza
 import factory_pattern_models.PizzaIngredientFactory
 import factory_pattern_models.PizzaStore
 import factory_pattern_models.pizzas.CheesePizza
