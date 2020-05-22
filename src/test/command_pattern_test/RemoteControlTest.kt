@@ -5,7 +5,10 @@ import command_pattern_models.light.LightOnCommand
 import command_pattern_models.RemoteControl
 import command_pattern_models.garage_door.GarageDoor
 import command_pattern_models.garage_door.GarageDoorOpenCommand
-import org.junit.Before
+import command_pattern_models.light.LightOffCommand
+import command_pattern_models.stereo.Stereo
+import command_pattern_models.stereo.StereoOnCommand
+import org.junit.Ignore
 import org.junit.Test
 import kotlin.test.assertEquals
 
@@ -18,7 +21,7 @@ class RemoteControlTest {
         val lightOn = LightOnCommand(light)
 
         remote.slot = lightOn
-        assertEquals(remote.smashThatButton(), "Flame On!")
+        assertEquals(remote.smashThatButton(), "Living Room Flame On!")
     }
 
     @Test
@@ -28,5 +31,29 @@ class RemoteControlTest {
 
         remote.slot = garageDoorOpenCommand
         assertEquals(remote.smashThatButton(), "Going up!")
+    }
+
+    @Ignore
+    @Test
+    fun `Can we do multiple controls?`() {
+//        val livingRoomLight = Light("Living Room")
+//        val kitchenLight = Light("Kitchen")
+//        val celingFan = ceilingFan("Living Room")
+//        val garageDoor = GarageDoor()
+//        val stereo = Stereo()
+//
+//        val livingRoomOn = LightOnCommand(livingRoomLight)
+//        val livingRoomOff = LightOffCommand(livingRoomLight)
+//        val kitchenLightOn = LightOnCommand(kitchenLight)
+//        val kitchenLightOff = LightOffCommand(kitchenLight)
+//
+//        val ceilingFanOn = CeilingFanOnComand(ceilingFan)
+//        val ceilingFanOff = CeilingFanOffCommand(ceilingFan)
+//
+//        val garageDoorOpen = GarageDoorOpenCommand(garageDoor)
+//        val garageDoorClosed = GarageDoorCloseCommand(garageDoor)
+//
+//        val stereoOn = StereoOnCommand(stereo)
+//        val stereoOff = StereoOffCommand(stereo)
     }
 }
