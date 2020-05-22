@@ -1,12 +1,15 @@
 package command_pattern_models.stereo
 
 class Stereo {
+    private var volume:Int = 0
 
     fun on(): String {
+        volume = 5
         return "Feel the gentle hum of glory"
     }
 
     fun off(): String {
+        volume = 0
         return "Powering down"
     }
 
@@ -22,7 +25,8 @@ class Stereo {
         return "I heard it on my radio"
     }
 
-    fun setVolume(volume:Int): String {
-        return "Crank it up to $volume!"
+    fun setVolume(level:Int): String {
+        volume += level
+        return "Stereo at $volume!"
     }
 }
