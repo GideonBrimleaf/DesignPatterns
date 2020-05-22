@@ -6,4 +6,8 @@ class CeilingFanOnCommand(private val ceilingFan: CeilingFan) : Command {
     override fun execute(): String {
         return ceilingFan.on()
     }
+
+    override fun undo(): String {
+        return ceilingFan.off()
+    }
 }

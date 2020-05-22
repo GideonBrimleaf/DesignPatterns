@@ -2,10 +2,13 @@ package command_pattern_models.stereo
 
 import command_pattern_models.Command
 
-class StereoOffCommand(val stereo: Stereo) : Command {
+class StereoOffCommand(private val stereo: Stereo) : Command {
     override fun execute(): String {
-        stereo.off()
-        return stereo.setVolume(0)
+        return stereo.off()
+    }
+
+    override fun undo(): String {
+        return stereo.on()
     }
 
 }

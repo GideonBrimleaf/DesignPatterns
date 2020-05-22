@@ -72,5 +72,7 @@ class RemoteControlTest {
         remote.offCommands.add(stereoOff)
 
         assertEquals("Living Room speed is 10", remote.onButtonPushed(3))
+        assertEquals("Living Room speed is 0", remote.undoButtonPush())
+        assertEquals("Powering down", remote.offButtonPush(5))
     }
 }
