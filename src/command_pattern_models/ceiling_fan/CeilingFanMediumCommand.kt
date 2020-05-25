@@ -2,12 +2,12 @@ package command_pattern_models.ceiling_fan
 
 import command_pattern_models.Command
 
-class CeilingFanOffCommand(private val ceilingFan: CeilingFan) : Command {
+class CeilingFanMediumCommand(private val ceilingFan: CeilingFan) : Command {
     private var prevSpeed = 0
 
     override fun execute(): String {
-        prevSpeed = ceilingFan.speed
-        return ceilingFan.off()
+        prevSpeed =  ceilingFan.speed
+        return ceilingFan.medium()
     }
 
     override fun undo(): String {

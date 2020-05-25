@@ -1,15 +1,32 @@
 package command_pattern_models.ceiling_fan
 
 class CeilingFan(private val room:String) {
-    private var speed:Int = 0
-
-    fun on():String {
-        speed = 10
-        return "$room speed is $speed"
-    }
+    val HIGH = 3
+    val MEDIUM = 2
+    val LOW = 1
+    val OFF = 0
+    var speed = OFF
+        private set
 
     fun off():String {
-        speed = 0
+        speed = OFF
         return "$room speed is $speed"
     }
+
+    fun high():String {
+        speed = HIGH
+        return "$room speed is $speed"
+    }
+
+    fun medium():String {
+        speed = MEDIUM
+        return "$room speed is $speed"
+    }
+
+    fun low():String {
+        speed = LOW
+        return "$room speed is $speed"
+    }
+
+
 }
