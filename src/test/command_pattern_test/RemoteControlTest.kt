@@ -1,5 +1,6 @@
 package test.command_pattern_test
 
+import command_pattern_models.PartyCommand
 import command_pattern_models.light.Light
 import command_pattern_models.light.LightOnCommand
 import command_pattern_models.RemoteControl
@@ -7,11 +8,13 @@ import command_pattern_models.ceiling_fan.*
 import command_pattern_models.garage_door.GarageDoor
 import command_pattern_models.garage_door.GarageDoorCloseCommand
 import command_pattern_models.garage_door.GarageDoorOpenCommand
+import command_pattern_models.hot_tub.HotTub
+import command_pattern_models.hot_tub.HotTubOffCommand
+import command_pattern_models.hot_tub.HotTubOnCommand
 import command_pattern_models.light.LightOffCommand
 import command_pattern_models.stereo.Stereo
 import command_pattern_models.stereo.StereoOffCommand
 import command_pattern_models.stereo.StereoOnCommand
-import org.junit.Ignore
 import org.junit.Test
 import kotlin.test.assertEquals
 
@@ -94,6 +97,31 @@ class RemoteControlTest {
         assertEquals("Living Room speed is 3", remote.onButtonPushed(2))
         assertEquals("Living Room speed is 2", remote.undoButtonPush())
         assertEquals("Living Room speed is 0", remote.offButtonPush(1))
+
+    }
+
+    @Test
+    fun `Party mode!`() {
+        val partyRoomLight = Light("Party Room")
+        val hotDub = HotTub()
+        val stereo = Stereo()
+
+        val stereoOn = StereoOnCommand(stereo)
+        val stereoOff = StereoOffCommand(stereo)
+        val partyRoomOn = LightOnCommand(partyRoomLight)
+        val partyRoomOff = LightOffCommand(partyRoomLight)
+        val hotTubOn = HotTubOnCommand(hotDub)
+        val hotTubOff = HotTubOffCommand(hotDub)
+
+        val partyOn = PartyCommand(mutableListOf(stereoOn, partyRoomOn, hotTubOn))
+        val partyOff = PartyCommand(mutableListOf(stereoOff, partyRoomOff, hotTubOff))
+
+        remote.onCommands.add(partyOn)
+        remote.offCommands.add(partyOff)
+
+        assertEquals("Feel the gentle hum of glory Party Room Flame On! Bubbly jets on", remote.onButtonPushed(1))
+        assertEquals("Powering down Party Room Flame Off! Bubbly jets off", remote.offButtonPush(1))
+        assertEquals("Feel the gentle hum of glory Party Room Flame On! Bubbly jets on", remote.undoButtonPush())
 
     }
 }
