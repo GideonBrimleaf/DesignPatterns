@@ -1,0 +1,2 @@
+package adapter_pattern_models
+
