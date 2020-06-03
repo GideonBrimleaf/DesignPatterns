@@ -1,12 +1,8 @@
 package test.template_method_pattern
 
-import org.junit.Assert.assertArrayEquals
 import org.junit.Test
 import template_method_pattern_models.Duck
-import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.test.assertEquals
-import kotlin.test.assertFalse
+import java.util.Arrays
 import kotlin.test.assertTrue
 
 class DuckTest {
