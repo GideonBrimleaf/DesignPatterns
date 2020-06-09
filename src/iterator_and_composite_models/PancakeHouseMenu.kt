@@ -29,6 +29,10 @@ class PancakeHouseMenu {
 
     )
 
+    fun createIterator():Iterator {
+        return PancakeHouseIterator(menuItems)
+    }
+
     private fun addItem(name:String, description:String, vegetarian:Boolean, price:Double) {
         val menuItem = MenuItem(name, description, vegetarian, price)
         menuItems.add(menuItem)

@@ -6,8 +6,8 @@ class DinerMenu {
         const val MAX_ITEMS = 6
     }
 
-    var numberOfItems = 0
-    var menuItems = arrayOf(
+    private var numberOfItems = 0
+    private val menuItems = arrayOf(
         MenuItem(
             "Vegetarian BLT",
             "(Fakin') Bacon with lettuce & tomato on whole wheat",
@@ -45,6 +45,10 @@ class DinerMenu {
             3.89
         )
     )
+
+    fun createIterator():Iterator {
+        return DinerMenuIterator(menuItems)
+    }
 
     private fun addItem(
         name: String, description: String,
