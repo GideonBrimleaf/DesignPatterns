@@ -3,12 +3,12 @@ package iterator_and_composite_models
 import kotlin.collections.Iterator
 
 class Waitress(
-    private val pancakeHouseMenu: PancakeHouseMenu,
-    private val dinerMenu: DinerMenu
+    private val breakfastMenu: Menu,
+    private val dinnerMenu: Menu
 ) {
     fun printMenu():String {
-        val pancakeIterator = pancakeHouseMenu.createIterator()
-        val dinerIterator = dinerMenu.createIterator()
+        val pancakeIterator = breakfastMenu.createIterator()
+        val dinerIterator = dinnerMenu.createIterator()
 
         val breakfastItems = getMenuItems(pancakeIterator)
         val dinnerResults = getMenuItems(dinerIterator)
