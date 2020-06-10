@@ -1,5 +1,7 @@
 package iterator_and_composite_models
 
+import kotlin.collections.Iterator
+
 class Waitress(
     private val pancakeHouseMenu: PancakeHouseMenu,
     private val dinerMenu: DinerMenu
@@ -14,7 +16,7 @@ class Waitress(
         return "Breakfast Menu: $breakfastItems Dinner Menu: $dinnerResults"
     }
 
-    private fun getMenuItems(iterator: Iterator):String {
+    private fun getMenuItems(iterator: Iterator<MenuItem>):String {
         var results = ""
         while (iterator.hasNext()) {
             val menuItem = iterator.next() as MenuItem

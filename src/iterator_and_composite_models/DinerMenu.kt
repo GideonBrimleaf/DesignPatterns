@@ -1,5 +1,7 @@
 package iterator_and_composite_models
 
+import kotlin.collections.Iterator
+
 class DinerMenu {
 
     companion object {
@@ -46,8 +48,8 @@ class DinerMenu {
         )
     )
 
-    fun createIterator():Iterator {
-        return DinerMenuIterator(menuItems)
+    fun createIterator(): Iterator<MenuItem> {
+        return menuItems.iterator()
     }
 
     private fun addItem(

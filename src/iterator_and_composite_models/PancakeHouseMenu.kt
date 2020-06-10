@@ -1,5 +1,7 @@
 package iterator_and_composite_models
 
+import kotlin.collections.Iterator
+
 class PancakeHouseMenu {
     val menuItems = mutableListOf(
         MenuItem(
@@ -29,8 +31,8 @@ class PancakeHouseMenu {
 
     )
 
-    fun createIterator():Iterator {
-        return PancakeHouseIterator(menuItems)
+    fun createIterator(): Iterator<MenuItem> {
+        return menuItems.iterator()
     }
 
     private fun addItem(name:String, description:String, vegetarian:Boolean, price:Double) {
