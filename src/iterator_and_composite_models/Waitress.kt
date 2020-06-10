@@ -18,7 +18,7 @@ class Waitress(
         var results = ""
         while (iterator.hasNext()) {
             val menuItem = iterator.next() as MenuItem
-            results += "${menuItem.name} - ${menuItem.description} - ${menuItem.price}"
+            results += menuItem.name + " - " + menuItem.description + " - " + menuItem.price + " "
         }
         return results
     }
