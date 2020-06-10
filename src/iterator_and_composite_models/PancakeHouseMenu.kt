@@ -2,7 +2,7 @@ package iterator_and_composite_models
 
 import kotlin.collections.Iterator
 
-class PancakeHouseMenu {
+class PancakeHouseMenu : Menu {
     val menuItems = mutableListOf(
         MenuItem(
             "K&B's Pancake Breakfast",
@@ -31,7 +31,7 @@ class PancakeHouseMenu {
 
     )
 
-    fun createIterator(): Iterator<MenuItem> {
+    override fun createIterator(): Iterator<MenuItem> {
         return menuItems.iterator()
     }
 

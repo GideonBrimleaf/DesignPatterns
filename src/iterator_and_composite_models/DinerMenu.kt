@@ -2,7 +2,7 @@ package iterator_and_composite_models
 
 import kotlin.collections.Iterator
 
-class DinerMenu {
+class DinerMenu : Menu {
 
     companion object {
         const val MAX_ITEMS = 6
@@ -48,7 +48,7 @@ class DinerMenu {
         )
     )
 
-    fun createIterator(): Iterator<MenuItem> {
+    override fun createIterator(): Iterator<MenuItem> {
         return menuItems.iterator()
     }
 
