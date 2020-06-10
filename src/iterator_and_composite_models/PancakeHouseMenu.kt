@@ -3,7 +3,7 @@ package iterator_and_composite_models
 import kotlin.collections.Iterator
 
 class PancakeHouseMenu : Menu {
-    val menuItems = mutableListOf(
+    private val menuItems = mutableListOf(
         MenuItem(
             "K&B's Pancake Breakfast",
             "Pancakes with Scrambled Eggs and Toast",

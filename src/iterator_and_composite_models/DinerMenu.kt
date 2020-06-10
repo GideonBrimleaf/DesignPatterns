@@ -49,6 +49,9 @@ class DinerMenu : Menu {
     )
 
     override fun createIterator(): Iterator<MenuItem> {
+//      The exercise here has us implement our own DinerIterator class here which implements
+//      the Java Util Iterator interface.  This is part of the design pattern learning but
+//      Kotlin seems tom be awesome enough to give us this for free to why not?
         return menuItems.iterator()
     }
 
