@@ -7,11 +7,11 @@ class Waitress(
     private val dinnerMenu: Menu
 ) {
     fun printMenu():String {
-        val pancakeIterator = breakfastMenu.createIterator()
-        val dinerIterator = dinnerMenu.createIterator()
+        val breakfastIterator = breakfastMenu.createIterator()
+        val dinnerIterator = dinnerMenu.createIterator()
 
-        val breakfastItems = getMenuItems(pancakeIterator)
-        val dinnerResults = getMenuItems(dinerIterator)
+        val breakfastItems = getMenuItems(breakfastIterator)
+        val dinnerResults = getMenuItems(dinnerIterator)
 
         return "Breakfast Menu: $breakfastItems Dinner Menu: $dinnerResults"
     }
